@@ -13,13 +13,16 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Kreon:300,400,700' },
+      { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Kreon:300,400,700' },
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    // color: '#fff',
+    color: '#3B8070'
+  },
   /*
   ** Global CSS
   */
@@ -44,11 +47,12 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    ['@nuxtjs/pwa', { icon: false }],
+
+    // Doc: https://bootstrap-vue.js.org
+    'bootstrap-vue/nuxt'
   ],
 
   // bootstrapVue config
@@ -63,14 +67,38 @@ module.exports = {
   */
   axios: {
   },
+
   /*
   ** Build configuration
   */
+  buildDir: '../functions/nuxt',
   build: {
+    publicPath: '/assets/',
+    extractCSS: true,
+
     /*
-    ** You can extend webpack config here
+    ** Run ESLint on save
     */
-    extend (config, ctx) {
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+          options: {
+            configFile: '.eslintrc.js'
+          }
+        })
+      }
     }
+  },
+
+  /*
+  ** manifest
+  */
+  manifest: {
+    name: process.env.npm_package_name || '',
+    lang: 'ja'
   }
 }
