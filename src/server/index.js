@@ -7,6 +7,9 @@ const app = express()
 const config = require('../nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
 
+// Middlewares
+const serverMiddleware = require('./serverMiddleware.js')
+
 async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
@@ -20,6 +23,9 @@ async function start () {
   } else {
     await nuxt.ready()
   }
+
+  // add serverMiddleware
+  app.use(serverMiddleware({ options: nuxt.options }))
 
   // Give nuxt middleware to express
   app.use(nuxt.render)

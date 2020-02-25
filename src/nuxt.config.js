@@ -100,5 +100,21 @@ module.exports = {
   manifest: {
     name: process.env.npm_package_name || '',
     lang: 'ja'
-  }
+  },
+
+  /*
+  ** router config
+  */
+  router: {
+    middleware: [
+      'logger'
+    ]
+  },
+
+  /*
+  ** serverMiddleware
+  */
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js' },
+  ],
 }
