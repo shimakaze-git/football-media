@@ -26,9 +26,12 @@ async function handleRequest(req, res) {
   await nuxt.render(req, res);
 }
 
+// asia-northeast1 region
+const region = 'asia-northeast1'
+
 app.get("*", handleRequest);
 app.use(handleRequest);
-exports.ssrapp = functions.https.onRequest(app);
+exports.ssrapp = functions.region(region).https.onRequest(app);
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
