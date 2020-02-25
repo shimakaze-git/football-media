@@ -30,6 +30,10 @@ $ firebase serve --only hosting,functions
 $ firebase deploy
 ```
 
+## TypeScript
+
+- [Cloud Functions に TypeScript を使用する](https://firebase.google.com/docs/functions/typescript?hl=ja)
+
 ## Links
 
 - [Nuxt.jsとFirebaseでSPA×SSR×PWA×サーバーレスを実現する](https://inside.dmm.com/entry/2018/04/10/nuxt-firebase)
