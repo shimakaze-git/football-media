@@ -1,0 +1,58 @@
+[
+  {
+    "post_id": 7448,
+    "post_title": "Algolia + SeaUrchin.IO",
+    "post_date": 1521007207,
+    "post_date_formatted": "Mar 14th 2018",
+    "author_name": "Nicolas Dessaigne",
+    "author_image_url": "https://secure.gravatar.com/avatar/785489bc2ac2e08ae66648a8936c1101?s=40&d=mm&r=g",
+    "permalink": "https://blog.algolia.com/algolia-acquires-seaurchin-io/",
+    "categories": ["News"],
+    "image": "https://blog.algolia.com/wp-content/uploads/2018/03/2018-03_SeaUrchin-01-360x200.png",
+    "time_to_read": 2,
+    "content": "Building our Next Wave of Analytics \nWe’re introducing an exciting addition to our product family and rolling out new analytics solutions for our customers \nI’m thrilled to announce today our first acquisition: SeaUrchin.IO — a real-time analytics platform that zeroes in on search insights. This is a key milestone on our path to help our customers improve their user engagement. We’ve been focused on identifying new opportunities for them to create more intuitive, relevant and rewarding experiences. Today’s announcements bring us one step closer on that journey.\nWhy SeaUrchin.IO?\nWe first came across the SeaUrchin.IO team as admirers of their technology. They built a unique platform that surfaced granular insights about how users were engaging with search. They were targeting the exact need we were trying to solve for our customers. We quickly saw that together, we could accomplish so much more for our customers… and accomplish it faster!\nThanks to the work we’ve already been doing to integrate SeaUrchin’s technology, the acquisition has enabled us to immediately accelerate the development of our analytics solutions. Read more about our new Analytics here.\nWe’re just getting started\nWe’ve had a quite a year of milestones — we crossed the 40 billion mark for search queries processed monthly, doubled our revenue, team and customers. But as excited as I am about what the team has accomplished, I’m even more excited about the future. Bringing new technology to our team gives us the ability to innovate faster and bring new solutions to our community.\nWe’re on a mission to give product builders the tools to create amazing experiences, so stay tuned for what’s next!",
+    "record_index": 0
+  },
+  {
+    "post_id": 7439,
+    "post_title": "Search Analytics: Gain Insights from User Search Data",
+    "post_date": 1521007105,
+    "post_date_formatted": "Mar 14th 2018",
+    "author_name": "Nicolas Baissas",
+    "author_image_url": "https://secure.gravatar.com/avatar/dfd620dc267d3f8182cafd9837593294?s=40&d=mm&r=g",
+    "permalink": "https://blog.algolia.com/supercharging-search-analytics/",
+    "categories": ["News"],
+    "image": "https://blog.algolia.com/wp-content/uploads/2018/03/01-2018_Analytics-V2-release-01-360x200.png",
+    "time_to_read": 1,
+    "content": "By analyzing what your users search for, you can understand what they want and which keywords they use. By looking at how they interact with the search results, you can understand how well your service answers their aspirations.\nMost importantly, through search, you can get invaluable feedback about your users’ intent: feedback that accelerates their digital journey, and therefore your revenue. But that’s only true if you’re actively using the data that they’re giving you through search —if you collect, analyze, and surface this data.\nOur new Analytics\nFor the first time, our Analytics feature will track the search flow in its entirety — from beginning to end. We’re not only analyzing the queries that are typed and the filters used, but also the results that are retrieved and how users interact with them. Do people click on the results list? Do they add a product to their cart, or read the article, or watch the video?\nToday, we’re releasing a new Analytics functionality, available via API as well as the newly updated front-end dashboard. It is designed to track click and conversion events following a search.\nWhat’s new \nAnalytics API \nSearches.  Improve visibility into queries and keywords users type, as well as queries that return zero results. Set up Query Rules for one-off problematic queries — or adjust your searchable attributes to address systemic issues. \nFilters. Create faster paths to conversion by predefining filters on specific keywords based on the most popular filters users are selecting when searching.\nResults. Improve relevance on every query by using insights into results users see when performing a search. Identify and analyze low quality search results and find problematic queries such as common typos, obscure queries and query reformulations in order to improve content and relevance.\nClick Analytics API\nClicks. Gain insights into what results users are clicking on, what position those results appear in, and the average",
+    "record_index": 0
+  },
+  {
+    "post_id": 7439,
+    "post_title": "Search Analytics: Gain Insights from User Search Data",
+    "post_date": 1521007105,
+    "post_date_formatted": "Mar 14th 2018",
+    "author_name": "Nicolas Baissas",
+    "author_image_url": "https://secure.gravatar.com/avatar/dfd620dc267d3f8182cafd9837593294?s=40&d=mm&r=g",
+    "permalink": "https://blog.algolia.com/supercharging-search-analytics/",
+    "categories": ["News"],
+    "image": "https://blog.algolia.com/wp-content/uploads/2018/03/01-2018_Analytics-V2-release-01-360x200.png",
+    "time_to_read": 1,
+    "content": "… click position of specific search queries \nConversions. Join search and conversion data in order to understand which search results are converting, and improve search queries that lead to users abandoning \nWhy it’s useful \n\nThere are two main ways search analytics provide value: by giving you actionable business insights, and by helping you improve the relevance of your search engine.\n\nBusiness insights\nBy analyzing the queries that your users are typing, you can get insights that will be useful across your business:\n\n\nImprove your catalog of product or content. For example, an e-commerce platform could realize that a specific product is often asked by customers and that they should add it to their catalogue.  A news outlet can learn more about the topics that their audience wants to read more about.\nImprove SEO. If your users are searching for certain words on your website, chances are these words are also the ones they type into Google.\nFuel your merchandising and marketing initiatives. Noticing the popularity of thematic words like “healthy”, “cheap”, or “revolutionary” can drive your future campaigns.\n\nImprove the relevance of the search\n\nAnalytics surfaces easy paths to improving your search relevance:\n\n\nThe query “couch” returns no result? Perhaps you’re missing the “sofa” synonym for “couch”.\n\nThe Click Rate on the query “tomato” is lower than you’d like? Perhaps your relevance configuration retrieves “tomato soup” higher than actual tomatoes, and you need to improve your relevance strategy.\n\nThe articles most surfaced by your search don't correspond to your best articles? You could update your ranking to showcase these more.\n\nIt’s only the beginning!\nEver since we've started Algolia, our goal has been to focus on making the best possible search engine, and our new Analytics feature is another step on that path. It adds a new dimension to the strong foundation of our engine: textual and business relevance, speed and",
+    "record_index": 1
+  },
+  {
+    "post_id": 7439,
+    "post_title": "Search Analytics: Gain Insights from User Search Data",
+    "post_date": 1521007105,
+    "post_date_formatted": "Mar 14th 2018",
+    "author_name": "Nicolas Baissas",
+    "author_image_url": "https://secure.gravatar.com/avatar/dfd620dc267d3f8182cafd9837593294?s=40&d=mm&r=g",
+    "permalink": "https://blog.algolia.com/supercharging-search-analytics/",
+    "categories": ["News"],
+    "image": "https://blog.algolia.com/wp-content/uploads/2018/03/01-2018_Analytics-V2-release-01-360x200.png",
+    "time_to_read": 1,
+    "content": "… reliability. \n\nWe can’t wait to see how you use Analytics to make meaningful improvements to your search experience and to your business. And we certainly plan to guide you along the way and help you make the most of the insights surfaced by your analytics. \n\nJoin our webinar on April 5 to discover how Search Analytics help drive conversion rates. Also, check out the following resources or contact us for a demo:\n\nInteractive tour\nAnalytics documentation\nClick Analytics documentation\n\nDon’t hesitate to get in touch and share your questions and feedback: shoot us an email, tweet to us, comment on this post.",
+    "record_index": 2
+  }
+]
