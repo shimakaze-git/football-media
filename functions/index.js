@@ -1,26 +1,32 @@
-const functions = require('firebase-functions');
-const express = require('express');
-const { Nuxt } = require('nuxt');
+const functions = require("firebase-functions");
+const express = require("express");
+const { Nuxt } = require("nuxt");
 
 const app = express();
 const nuxt = new Nuxt({
   dev: false,
-  buildDir: 'nuxt',
+  buildDir: "nuxt",
   build: {
-    publicPath: '/assets/'
+    publicPath: "/assets/"
   }
 });
 
-function handleRequest(req, res) {
-    res.set('Cache-Control', 'public, max-age=600, s-maxage=1200');
-    return new Promise((resolve, reject) => {
-        console.log('resolve', resolve)
-        nuxt.render(req, res, (promise) => {
-            promise.then(resolve).catch(reject);
-        });
-    });
+let isReady = false
+const readyPromise = nuxt.ready().then(() => {
+  isReady = true
+}).catch(() => {
+  process.exit(1)
+})
+
+async function handleRequest(req, res) {
+  if (!isReady) {
+    await readyPromise;
+  }
+  res.set("Cache-Control", "public, max-age=600, s-maxage=1200");
+  await nuxt.render(req, res);
 }
 
+app.get("*", handleRequest);
 app.use(handleRequest);
 exports.ssrapp = functions.https.onRequest(app);
 
