@@ -1,5 +1,5 @@
 function apiLog(req) {
-    console.log('req apiLog', req.path)
+  // console.log('req apiLog', req.path)
 }
 
 
