@@ -1,0 +1,10 @@
+{
+  "name": "algolia",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "algoliasearch": "^4.0.3",
+    "dotenv": "^8.2.0",
+    "firebase": "^7.9.3"
+  }
+}

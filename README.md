@@ -40,3 +40,10 @@ $ firebase deploy
 - [kamatte-me/nuxt-firebase-pwa](https://github.com/kamatte-me/nuxt-firebase-pwa)
 - [Nuxt 2.5.1: promise is undefined](https://github.com/nuxt/nuxt.js/issues/5377)
 - [関数のデプロイとランタイム オプションを管理する](https://firebase.google.com/docs/functions/manage-functions?hl=ja)
+
+### Algolia
+
+- [Nuxt.js+Algoliaで全文検索可能なタスク管理アプリを実装するハンズオン！](https://qiita.com/mido_app/items/919839aaf33382d9bc89)
+- [Firebase Cloud FunctionsとAlgoliaの連携を試してみた](https://qiita.com/daikiojm/items/8e6d42d1e28b8ebf9f43)
+- [イケてる全文検索サービス「Algolia」を触ってみよう](https://qiita.com/tschy/items/eefbb3a0dc60cd11ab9a)
+
