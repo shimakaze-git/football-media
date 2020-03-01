@@ -14,6 +14,7 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Kreon:300,400,700' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css' }
     ]
   },
   /*
@@ -27,7 +28,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    // '@/assets/css/style.css',
+    '@/assets/css/style.css',
+    // '@/assets/css/bootstrap.css',
+    // '@/assets/css/bootstrap.min.css',
     'bootstrap/dist/css/bootstrap.css',
     'bootstrap/dist/css/bootstrap.min.css',
   ],
@@ -35,6 +38,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/axios',
+    '~/plugins/apiRegister',
   ],
   /*
   ** Nuxt.js dev-modules

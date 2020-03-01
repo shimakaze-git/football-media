@@ -2,6 +2,7 @@
   <div>
     <ul class="ads_nav list-unstyled">
       <!-- <h4>Ads 125 x 125</h4> -->
+      <h4></h4>
       <li>
         <a href="#"><img src="~/assets/images/ads_pic.jpg" alt="" /></a>
       </li>
