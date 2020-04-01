@@ -1,10 +1,23 @@
 <template>
   <div>
+    <Header />
     <nuxt />
   </div>
 </template>
 
-<script></script>
+<script>
+import Header from '~/layouts/header.vue'
+
+export default {
+  layout: 'defaultLayout',
+  components: {
+    Header
+  },
+  data () {
+    return {}
+  }
+}
+</script>
 
 <style>
 html {
