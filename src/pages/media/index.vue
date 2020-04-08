@@ -1,6 +1,8 @@
 <template>
   <div class="container"><!-- start main -->
     <div class="main row">
+
+      <ListPlayers />
       <div class="col-md-8 blog_left">
 
         <ListVisualAreabar />
@@ -42,6 +44,7 @@
 </template>
 
 <script>
+import ListPlayers from '~/components/ListPlayers.vue'
 import ListVisualAreabar from '~/components/VisualAreabar.vue'
 import ListSidebar from '~/components/ListSidebar.vue'
 import url from 'url/url'
@@ -50,6 +53,7 @@ export default {
   name: 'MediaList',
   layout: 'mediaLayout',
   components: {
+    ListPlayers,
     ListVisualAreabar,
     ListSidebar,
   },
