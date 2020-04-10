@@ -1,9 +1,6 @@
 <template>
   <div>
-    <!-- <div class="player-container"> -->
-      <!-- <vue-core-video-player src="./your_video_source.mp4"></vue-core-video-player> -->
-    <!-- </div> -->
-    <div class="recommend-list">
+    <!-- <div class="recommend-list">
       <a-row>
         <a-col :xs="12" :md="6">
           <div class="movie-recommended">
@@ -104,6 +101,26 @@
           </div>
         </a-col>
       </a-row>
+    </div> -->
+
+    <div class="recommend-list">
+      <!-- {{ videos }} -->
+      <!-- {{ video.link }} -->
+      <a-row>
+        <a-col :xs="12" :md="6" v-for='video in videos' :key='video.id'>
+          <div class="movie-recommended" @click="changeMovie(video.id)">
+            <div class="cover">
+              <img :src='getYoutubeId(video.link)' alt="cover">
+              <div class="date">{{ video.publishedDate }}</div>
+            </div>
+            <div class="detail">
+              <div class="title">{{ video.title }}</div>
+              <div class="author">{{ video.date }}</div>
+              <div class="duration">Time: {{ video.time }}</div>
+            </div>
+          </div>
+        </a-col>
+      </a-row>
     </div>
 
   </div>
@@ -112,7 +129,20 @@
 <script>
 
 export default {
-  components: {}
+  components: {},
+  props: ['videos'],
+  methods: {
+    getYoutubeId (url) {
+      let youtubeId = url.split('?v=')[1]
+      // return 'https://img.youtube.com/vi/' + youtubeId + '/hqdefault.jpg'
+      return 'https://img.youtube.com/vi/' + youtubeId + '/sddefault.jpg'
+      // return 'https://img.youtube.com/vi/' + youtubeId + '/mqdefault.jpg'
+    },
+    changeMovie (id) {
+      location.href = '/' + id
+    }
+  }
+  // computed: {}
 }
 </script>
 

@@ -3,7 +3,7 @@
   <!-- class container -->
 
     <table class="card_table">
-      <mediaList />
+      <mediaList :videos='videos' />
 
       <!-- 
       <tbody id="card_table">
@@ -155,6 +155,7 @@
 </template>
 
 <script>
+import Video from '~/services/video'
 import Logo from '~/components/Logo.vue'
 import mediaList from '~/components/mediaList.vue'
 
@@ -162,6 +163,25 @@ export default {
   components: {
     mediaList,
     Logo
+  },
+  data() {
+    return {
+      videos: []
+    }
+  },
+  methods: {
+    fetchVideos () {
+      Video.fetchVideos()
+        .then(data => {
+          this.videos = data
+        })
+        .catch()
+    }
+  },
+  // computed: {},
+  async created () {
+    // console.log('Video', Video)
+    this.fetchVideos()
   }
 }
 </script>
