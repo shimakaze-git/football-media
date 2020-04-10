@@ -35,7 +35,7 @@
 
       </a-col>
       <a-col :xs="24" :md="8" class='play-list'>
-        <h2>Play List</h2>
+        <h2>新着動画リスト</h2>
         <div class="movie-item">
           <div class="cover">
             <img src="https://img1.wxzxzj.com/vpc-example-cover-5cm.png" alt="cover">

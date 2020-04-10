@@ -25,6 +25,10 @@ export default {
   css: [
     'ant-design-vue/dist/antd.css'
   ],
+
+  generate: {
+    fallback: true
+  },
   /*
   ** Plugins to load before mounting the App
   */

@@ -19,9 +19,10 @@
         </div>
       </div>
       <div class="header--tab_container">
-        <a class="header--tab_wrapper select">マスク</a>
-        <a class="header--tab_wrapper" href="/" onclick="location.href = '/alcoholgel'">アルコールジェル</a>
-        <a class="header--tab_wrapper" href="/" onclick="location.href = '/alcoholspray'">アルコールスプレー</a>
+        <a class="header--tab_wrapper select" href="/" >全て</a>
+        <a class="header--tab_wrapper" href="/japan" onclick="location.href = '/alcoholgel'">日本人(海外)</a>
+        <a class="header--tab_wrapper" href="/jlearge" onclick="location.href = '/alcoholspray'">Jリーグ</a>
+        <a class="header--tab_wrapper" href="/spain" onclick="location.href = '/alcoholgel'">スペイン</a>
       </div>
     </header>
   </div>
