@@ -2,14 +2,28 @@
   <div class='media-box'>
     <a-row>
       <a-col :xs="24" :md="16" class='video-box'>
-        <div id="vue-core-video-player-box" class="player">
+        <div id="vue-core-video-player-box" class="player" v-if='videoId'>
+          {{ videoId }}
           <youtubeFrame :videoId='videoId' />
         </div>
 
         <div class="movie-detail">
           <h1 class="title">{{ name }}</h1>
-          <div class="date">Makoto Shinkai - 2016</div>
+          <!-- <div class="date">Makoto Shinkai - 2016</div> -->
+          <div class="date">{{ date }}</div>
           <div class="desc">{{ description }}</div>
+          <hr />
+          <div class="movie-item">
+            <div class="cover" v-if='videoId'>
+              <img :src='getYoutubeThumbnail' alt="cover">
+              <div class="duration">{{ time }}</div>
+            </div>
+            <div class="detail">
+              <div class="title">{{ name }}</div>
+              <!-- <div class="author">{{ publishedDate }}</div> -->
+              <div class="date">{{ publishedDate }}</div>
+            </div>
+          </div>
           <!-- <div class="btn-wrap">
             <button type="button" class="btn btn-outline-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="#ff6060">
@@ -53,6 +67,7 @@
 </template>
 
 <script>
+import Video from '~/services/video'
 import Logo from '~/components/Logo.vue'
 import mediaList from '~/components/mediaList.vue'
 import youtubeFrame from '~/components/youtubeFrame.vue'
@@ -65,13 +80,44 @@ export default {
   },
   data() {
     return {
-      videoId: 'dv21fcORqQE',
-      name: 'Your Name',
-      description: ''
+      movieId: null,
+      videoId: "",
+      name: '',
+      description: '',
+      link: '',
+      publishedDate: '',
+      date: '',
+      time: ''
+    }
+  },
+  methods: {
+    fetchVideo () {
+      Video.fetchVideoId(this.movieId)
+        .then(data => {
+          // console.log('data', data)
+          // console.log(data.link.split('?v=')[1])
+          this.videoId = data.link.split('?v=')[1]
+          this.name = data.title
+          this.description = data.content
+
+          this.link = data.link
+          this.publishedDate = data.publishedDate
+          this.date = data.date
+
+          this.time = data.time
+        })
+        .catch()
+    }
+  },
+  async created () {
+    this.movieId = this.$route.params.id
+    this.fetchVideo()
+  },
+  computed: {
+    getYoutubeThumbnail () {
+      return 'https://img.youtube.com/vi/' + this.videoId + '/sddefault.jpg'
     }
   }
-  // methods: {},
-  // computed: {}
 }
 </script>
 

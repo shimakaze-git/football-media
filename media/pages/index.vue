@@ -170,8 +170,12 @@ export default {
     }
   },
   methods: {
-    fetchVideos () {
-      Video.fetchVideos()
+    fetchVideos (page) {
+      let limit = 40
+      let offset = (page-1) * limit
+
+      // ビデオ取得
+      Video.fetchVideos(limit, offset)
         .then(data => {
           this.videos = data
         })
@@ -180,8 +184,11 @@ export default {
   },
   // computed: {},
   async created () {
-    // console.log('Video', Video)
-    this.fetchVideos()
+    let page = 1
+    if ('page' in this.$route.query) {
+      page = this.$route.query.page
+    }
+    this.fetchVideos(page)
   }
 }
 </script>
