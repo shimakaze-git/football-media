@@ -19,7 +19,7 @@
             </button>
           </div> -->
           <hr />
-          <div class="movie-item">
+          <div class="movie-item" @click="changeMovie()">
             <div class="cover" v-if='videoId'>
               <img :src='getYoutubeThumbnail' alt="cover">
               <div class="duration">{{ time }}</div>
@@ -32,6 +32,7 @@
           </div>
           <!-- <hr /> -->
 
+          <!-- <playerCard /> -->
           <!-- <recommendList /> -->
         </div>
 
@@ -52,14 +53,16 @@
 import Video from '~/services/video'
 import Logo from '~/components/Logo.vue'
 import mediaList from '~/components/mediaList.vue'
-// import recommendList from '~/components/recommendList.vue'
 import NewMovieList from '~/components/NewMovieList.vue'
 import youtubeFrame from '~/components/youtubeFrame.vue'
+// import recommendList from '~/components/recommendList.vue'
+// import playerCard from '~/components/playerCard.vue'
 
 export default {
   components: {
     mediaList,
     // recommendList,
+    // playerCard,
     NewMovieList,
     Logo,
     youtubeFrame
@@ -91,6 +94,9 @@ export default {
           this.time = data.time
         })
         .catch()
+    },
+    changeMovie () {
+      location.href = this.link
     }
   },
   async created () {

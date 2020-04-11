@@ -46,4 +46,7 @@ export default {
 <style scoped>
 @import "@/assets/css/app.css";
 
+.header {
+  margin-bottom: 50px;
+}
 </style>
