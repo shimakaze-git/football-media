@@ -10,8 +10,8 @@
             height="32"
           />
           <p class="header--title_logo">フットボールメディア</p>
-          <!-- <p class="header--by">by</p> -->
-          <!-- <a class="header--smooz_logo" href="https://smoozapp.com/ja/" target="_blank&quot;&quot;">
+          <!-- <p class="header--by">by</p>
+          <a class="header--smooz_logo" href="https://smoozapp.com/ja/" target="_blank&quot;&quot;">
             <img
               src="https://zaiko.smoozapp.com/image/smooz_logo.png"
             />
@@ -19,14 +19,29 @@
         </div>
       </div>
       <div class="header--tab_container">
-        <a class="header--tab_wrapper select" href="/" >全て</a>
-        <a class="header--tab_wrapper" href="/japan" onclick="location.href = '/alcoholgel'">日本人(海外)</a>
-        <a class="header--tab_wrapper" href="/jlearge" onclick="location.href = '/alcoholspray'">Jリーグ</a>
-        <a class="header--tab_wrapper" href="/spain" onclick="location.href = '/alcoholgel'">スペイン</a>
+        <a :class="{'header--tab_wrapper': true, 'select': $route.path === '/'}" href="/" >全て</a>
+        <a :class="{'header--tab_wrapper': true, 'select': $route.path === '/genre/japan'}" href="/genre/japan">日本人(海外)</a>
+        <a :class="{'header--tab_wrapper': true, 'select': $route.path === '/genre/jlearge'}" href="/genre/jlearge">Jリーグ</a>
+        <a :class="{'header--tab_wrapper': true, 'select': $route.path === '/genre/spain'}" href="/genre/spain">スペイン</a>
       </div>
     </header>
   </div>
 </template>
+
+<script>
+
+export default {
+  // components: {},
+  data() {
+    return {}
+  }
+  // methods: {},
+  // computed: {},
+  // async created () {
+  //   const path = this.$route.path
+  // }
+}
+</script>
 
 <style scoped>
 @import "@/assets/css/app.css";
